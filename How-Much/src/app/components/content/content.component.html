@@ -1,0 +1,41 @@
+<p>
+  <mat-toolbar>
+    <span>Some toolbar</span>
+  </mat-toolbar>
+</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Some header <mat-chip disabled></mat-chip></mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <ul class="heroes">
+      <li *ngFor="let flow of flows$ | async">
+        <a [routerLink]="['/flows/' + flow.id]">
+          {{flow.name}}
+        </a>
+        <button type="button">
+          <span class="badge"></span>
+        </button>
+      </li>
+    </ul>
+
+
+    <mat-grid-list cols="3">
+      <mat-grid-tile>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+  <mat-card-footer align="end">
+    <button mat-stroked-button>
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+    <button mat-stroked-button>
+      <mat-icon>cancel</mat-icon>
+      Cancel
+    </button>
+  </mat-card-footer>
+</mat-card>

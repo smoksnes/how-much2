@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+h2{
+    text-align: center;
+    margin:16px 0 16px 0;
+}
+
+.answer-container{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    gap: 10px;
+    .item{
+        flex: 1 1 0px;
+        button{
+            min-width: 200px;
+        }
+
+        &:hover{
+            button{
+                @include mat.elevation(8);
+            }
+        }
+    }
+}
