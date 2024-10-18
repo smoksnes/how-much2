@@ -7,13 +7,16 @@ import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [MatDivider, NgFor],
+  imports: [MatDivider, NgFor, NgIf],
   selector: 'question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit  {
   question = input.required<IQuestion>();
+  innerQuestions: IQuestion[] | undefined;
+  innerQuestion: IQuestion | undefined;
+  private currentQuestionIndex:number = 0;
 
   constructor(){
   }
@@ -25,8 +28,12 @@ export class QuestionComponent implements OnInit  {
   }
 
   select = (answer: IAnswer) => {
-  console.log(answer.title);
-  console.log('hello');
-  // this.store.dispatch(FlowActions.selectanswer({answer: answer}));
+    console.log(answer.title);
+    console.log('hello');
+    if(answer.questions != null && answer.questions.length > 0){
+      console.log('hello');
+      this.innerQuestions = answer.questions;
+      this.innerQuestion = answer.questions[this.currentQuestionIndex];
+    }
   }
 }

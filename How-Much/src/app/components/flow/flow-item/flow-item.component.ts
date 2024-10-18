@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 import { CommonModule, NgFor } from '@angular/common';
 import { QuestionComponent } from "../../question/question.component";
 import IQuestion from "../../../interfaces/question";
+import { QuestionsComponent } from "../../questions/questions.component";
 
 @Component({
   standalone: true,
@@ -23,7 +24,8 @@ import IQuestion from "../../../interfaces/question";
     RouterLink, 
     NgFor, 
     CommonModule,
-    QuestionComponent
+    QuestionComponent,
+    QuestionsComponent
   ],
   selector: 'flow-item',
   templateUrl: './flow-item.component.html',
@@ -44,7 +46,7 @@ export class FlowItemComponent implements OnInit {
 
   ngOnInit() {
     this.questions = this.flow().questions;
-    this.currentQuestionIndex = 0;
-    this.currentQuestion = this.questions[this.currentQuestionIndex];
+    // this.currentQuestionIndex = 0;
+    // this.currentQuestion = this.questions[this.currentQuestionIndex];
   }
 }

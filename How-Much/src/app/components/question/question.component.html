@@ -12,3 +12,9 @@
     </ng-container>
 </div>
 
+<ng-container *ngIf="innerQuestion; else defaultTmpl">
+    <question [question]="innerQuestion!"></question>
+</ng-container>
+<ng-template #defaultTmpl>...</ng-template>
+
+
