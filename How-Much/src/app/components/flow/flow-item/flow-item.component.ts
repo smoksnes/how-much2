@@ -9,10 +9,22 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterLink } from '@angular/router'; 
 import { CommonModule, NgFor } from '@angular/common';
+import { QuestionComponent } from "../../question/question.component";
+import IQuestion from "../../../interfaces/question";
 
 @Component({
   standalone: true,
-  imports: [MatCardModule, MatToolbarModule,MatChipsModule, MatDividerModule, MatIconModule, MatGridListModule, RouterLink, NgFor, CommonModule],
+  imports: [MatCardModule, 
+    MatToolbarModule,
+    MatChipsModule, 
+    MatDividerModule, 
+    MatIconModule, 
+    MatGridListModule, 
+    RouterLink, 
+    NgFor, 
+    CommonModule,
+    QuestionComponent
+  ],
   selector: 'flow-item',
   templateUrl: './flow-item.component.html',
   styleUrls: ['./flow-item.component.scss']
@@ -20,15 +32,19 @@ import { CommonModule, NgFor } from '@angular/common';
 export class FlowItemComponent implements OnInit {
   // CurrentFlow! : Input<IFlow>()
 
-  public flow = input<IFlow>();
+  flow = input.required<IFlow>();
 
-  // currentQuestion$ : Observable<IQuestion>;
+  private questions!: IQuestion[];
+  private currentQuestionIndex!:number;
+  public currentQuestion!: IQuestion;
+
   constructor(private flowService: FlowService){
-    debugger;
-    // this.currentQuestion$ = this.store.select(getCurrentQuestion());
+
   }
 
   ngOnInit() {
-  // this.CurrentQuestion = this.store.select(selectcurr);
+    this.questions = this.flow().questions;
+    this.currentQuestionIndex = 0;
+    this.currentQuestion = this.questions[this.currentQuestionIndex];
   }
 }

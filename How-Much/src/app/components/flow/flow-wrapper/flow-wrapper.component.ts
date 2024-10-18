@@ -26,6 +26,7 @@ export class FlowWrapperComponent implements OnDestroy  {
     this.flow$ = this.route.params.pipe(
       concatMap(params => {
         this.id = +params['id'];
+        debugger;
         var flow = this.flowService.getFlowById(this.id);
         // var flow = this.store.select(getFlowById(this.id));
         // this.store.dispatch(FlowActions.selected({id: this.id}));

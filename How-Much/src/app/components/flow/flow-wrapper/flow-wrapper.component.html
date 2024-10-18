@@ -1,4 +1,4 @@
 <ng-container *ngIf="(flow$ | async) as flow; else defaultTmpl">
-    <flow-item [flow]="flow"></flow-item>
+    <flow-item *ngIf="flow != null" [flow]="flow"></flow-item>
 </ng-container>
 <ng-template #defaultTmpl>...</ng-template>

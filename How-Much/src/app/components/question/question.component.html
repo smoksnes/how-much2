@@ -1,7 +1,7 @@
 <h2>question works - {{question()!.title}}</h2>
 <mat-divider></mat-divider>
 <div class="answer-container">
-    <ng-container *ngFor="let answer of this.CurrentQuestion.answers">
+    <ng-container *ngFor="let answer of this.question().answers">
         <div class="item">
             <button mat-raised-button (click)="select(answer)">{{answer.title}}</button>
             <!-- <mat-card>

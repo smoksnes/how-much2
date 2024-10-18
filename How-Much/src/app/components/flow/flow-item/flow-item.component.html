@@ -1,5 +1,4 @@
 <mat-toolbar color="primary">
-    <span>{{flow()!.name}}</span>
+    <span>{{flow().name}}</span>
   </mat-toolbar>
-
-<!-- <question [CurrentQuestion]="(currentQuestion$ | async)!"></question> -->
+<question [question]="(currentQuestion)"></question>

@@ -2,17 +2,18 @@ import { Component, input, Input, OnInit } from '@angular/core';
 import IQuestion from '../../interfaces/question';
 import { MatDivider } from '@angular/material/divider';
 import IAnswer from '../../interfaces/answer';
+import { NgFor, NgIf } from '@angular/common';
 
 
 @Component({
   standalone: true,
-  imports: [MatDivider],
+  imports: [MatDivider, NgFor],
   selector: 'question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit  {
-  question = input<IQuestion>();
+  question = input.required<IQuestion>();
 
   constructor(){
   }
