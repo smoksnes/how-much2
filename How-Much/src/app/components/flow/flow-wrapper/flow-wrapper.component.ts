@@ -1,10 +1,10 @@
-import { Component, OnDestroy } from "@angular/core";
+import { Component, OnDestroy, TemplateRef } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { concatMap, Observable } from "rxjs";
 import FlowService from "../../../services/flow-service";
 import IFlow from "../../../interfaces/flow";
 import { FlowItemComponent } from "../flow-item/flow-item.component";
-import { CommonModule, NgIf } from "@angular/common";
+import { CommonModule, NgIf, NgTemplateOutlet } from "@angular/common";
 
 
 @Component({
@@ -12,7 +12,7 @@ import { CommonModule, NgIf } from "@angular/common";
   selector: 'flow-wrapper-component',
   templateUrl: './flow-wrapper.component.html',
   styleUrls: ['./flow-wrapper.component.scss'],
-  imports: [FlowItemComponent, NgIf, CommonModule ],  
+  imports: [FlowItemComponent, NgIf, NgTemplateOutlet, CommonModule ],  
 })
 export class FlowWrapperComponent implements OnDestroy  {
   sub: any;  
@@ -26,7 +26,6 @@ export class FlowWrapperComponent implements OnDestroy  {
     this.flow$ = this.route.params.pipe(
       concatMap(params => {
         this.id = +params['id'];
-        debugger;
         var flow = this.flowService.getFlowById(this.id);
         // var flow = this.store.select(getFlowById(this.id));
         // this.store.dispatch(FlowActions.selected({id: this.id}));

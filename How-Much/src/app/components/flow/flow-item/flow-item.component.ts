@@ -1,4 +1,4 @@
-import { Component, input, OnInit } from "@angular/core";
+import { Component, computed, input, OnInit, Signal } from "@angular/core";
 import FlowService from "../../../services/flow-service";
 import IFlow from "../../../interfaces/flow";
 import { MatCardModule } from '@angular/material/card';
@@ -36,7 +36,7 @@ export class FlowItemComponent implements OnInit {
 
   flow = input.required<IFlow>();
 
-  private questions!: IQuestion[];
+  private questions: Signal<IQuestion[]> = computed(() => this.flow().questions);
   private currentQuestionIndex!:number;
   public currentQuestion!: IQuestion;
 
@@ -45,7 +45,7 @@ export class FlowItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.questions = this.flow().questions;
+    // this.questions = this.flow().questions;
     // this.currentQuestionIndex = 0;
     // this.currentQuestion = this.questions[this.currentQuestionIndex];
   }
