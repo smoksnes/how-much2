@@ -32,6 +32,7 @@ import { QuestionsComponent } from "../../questions/questions.component";
   styleUrls: ['./flow-item.component.scss']
 })
 export class FlowItemComponent implements OnInit {
+
   // CurrentFlow! : Input<IFlow>()
 
   flow = input.required<IFlow>();
@@ -49,4 +50,8 @@ export class FlowItemComponent implements OnInit {
     // this.currentQuestionIndex = 0;
     // this.currentQuestion = this.questions[this.currentQuestionIndex];
   }
+
+  onFinished() {
+    alert('Finished');
+    }
 }

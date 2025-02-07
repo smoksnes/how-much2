@@ -1,4 +1,4 @@
 <mat-toolbar color="primary">
     <span>{{flow().name}}</span>
   </mat-toolbar>
-<questions [questions]="(flow())"></questions>
+<questions [questions]="(flow())" (isFinished)="onFinished()"></questions>
