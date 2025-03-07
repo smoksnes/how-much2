@@ -1,17 +1,21 @@
-<p>bar</p>
-
 <div class="answer-container">
   <ng-container *ngIf="subQuestions == null">
-    <h1>{{currentQuestion().title}}</h1>
-    <ng-container *ngFor="let answer of currentQuestion().answers">
-      <div class="example-button-container">
-        <button mat-fab extended (click)="select(answer)">
-          <mat-icon>favorite</mat-icon>
-          {{answer.title}}
-        </button>
+    <div class="example-button-row">
+      <h1>{{currentQuestion().title}}</h1>
+      <div class="example-flex-container">
+        <ng-container *ngFor="let answer of currentQuestion().answers">
+          <div class="example-button-container">
+            <button mat-fab extended (click)="select(answer)">
+              
+              <mat-icon *ngIf="answer.icon">{{answer.icon}}</mat-icon>
+              {{answer.title}}
+            </button>
+          </div>
+        </ng-container>
       </div>
-    </ng-container>
-</ng-container>
+    </div>
+  </ng-container>
+</div>
 
 <ng-container *ngIf="subQuestions != null">
   <questions [questions]="subQuestions" (isFinished)="childIsFinishedHandler()"></questions>

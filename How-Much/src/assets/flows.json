@@ -5,23 +5,66 @@
         "startSum": 50,
         "questions": [
             {
-                "title": "Gillade du jobbarkompisen?",
+                "title": "Har du gott om pengar?",
                 "answers": [
                     {
+                        "title": "Ja",
+                        "icon": "account_balance",
+                        "calculation": {
+                            "sum": 40,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "Ganska",
+                        "icon": "attach_money",
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "addition"
+                        }
+                    },
+                    {
                         "title": "Nej",
-                        "value": 1,
+                        "icon": "savings",
+                        "calculation": {
+                            "sum": 0,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Är du snål?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "icon": "money_off",
                         "calculation": {
                             "sum": 10,
                             "operation": "subtraction"
                         }
                     },
                     {
-                        "title": "Ja",
-                        "value": 2,
+                        "title": "Nej",
+                        "icon": "attach_money",
                         "calculation": {
                             "sum": 0,
                             "operation": "addition"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Gillar du jobbarkompisen?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "value": 2,
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "addition"
                         },
+                        "icon": "thumb_up",
                         "questions": [
                             {
                                 "title": "Hur mycket gillade du jobbarkompisen?",
@@ -29,14 +72,62 @@
                                     {
                                         "title": "Jättemycket",
                                         "value": 1,
+                                        "icon": "mood",
                                         "calculation": {
-                                            "sum": 10,
+                                            "sum": 20,
                                             "operation": "addition"
-                                        }
+                                        },
+                                        "questions": [
+                                            {
+                                                "title": "Fling?",
+                                                "answers": [
+                                                    {
+                                                        "title": "Kanske...",
+                                                        "icon": "single_bed",
+                                                        "calculation": {
+                                                            "sum": 50,
+                                                            "operation": "addition"
+                                                        },
+                                                        "questions": [
+                                                            {
+                                                                "title": "Slutade det bra?",
+                                                                "answers": [
+                                                                    {
+                                                                        "title": "Ja",
+                                                                        "icon": "favorite",
+                                                                        "calculation": {
+                                                                            "sum": 10,
+                                                                            "operation": "addition"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "title": "Nej",
+                                                                        "icon": "heart_broken",
+                                                                        "calculation": {
+                                                                            "sum": 50,
+                                                                            "operation": "subtraction"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Nej",
+                                                        "icon": "heart_broken",
+                                                        "calculation": {
+                                                            "sum": 0,
+                                                            "operation": "addition"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
                                     {
                                         "title": "Bara lite",
                                         "value": 2,
+                                        "icon": "sentiment_neutral",
                                         "calculation": {
                                             "sum": 5,
                                             "operation": "addition"
@@ -45,6 +136,15 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "title": "Nej",
+                        "value": 1,
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "subtraction"
+                        },
+                        "icon": "thumb_down"
                     }
                 ]
             },
@@ -53,8 +153,9 @@
                 "answers": [
                     {
                         "title": "Ja",
+                        "icon": "add_home_work",
                         "calculation": {
-                            "sum": 0,
+                            "sum": 20,
                             "operation": "none"
                         },
                         "questions": [
@@ -63,6 +164,7 @@
                                 "answers": [
                                     {
                                         "title": "Ja",
+                                        "icon": "check",
                                         "calculation": {
                                             "sum": 20,
                                             "operation": "addition"
@@ -70,6 +172,7 @@
                                     },
                                     {
                                         "title": "Nej",
+                                        "icon": "close",
                                         "calculation": {
                                             "sum": 5,
                                             "operation": "addition"
@@ -82,13 +185,15 @@
                                 "answers": [
                                     {
                                         "title": "Ja",
+                                        "icon": "family_restroom",
                                         "calculation": {
-                                            "sum": 10,
+                                            "sum": 20,
                                             "operation": "addition"
                                         }
                                     },
                                     {
                                         "title": "Nej",
+                                        "icon": "close",
                                         "calculation": {
                                             "sum": 0,
                                             "operation": "none"
@@ -100,6 +205,7 @@
                     },
                     {
                         "title": "Nej",
+                        "icon": "close",
                         "calculation": {
                             "sum": 0,
                             "operation": "none"

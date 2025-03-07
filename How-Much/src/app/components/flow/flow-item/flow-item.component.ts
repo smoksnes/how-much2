@@ -1,4 +1,4 @@
-import { Component, computed, input, OnInit, Signal } from "@angular/core";
+import { Component, computed, input, OnInit, signal, Signal } from "@angular/core";
 import FlowService from "../../../services/flow-service";
 import IFlow from "../../../interfaces/flow";
 import { MatCardModule } from '@angular/material/card';
@@ -12,18 +12,17 @@ import { CommonModule, NgFor } from '@angular/common';
 import { QuestionComponent } from "../../question/question.component";
 import IQuestion from "../../../interfaces/question";
 import { QuestionsComponent } from "../../questions/questions.component";
+import { ResultsComponent } from "../../results/results.component";
 
 @Component({
     imports: [MatCardModule,
+        ResultsComponent,
         MatToolbarModule,
         MatChipsModule,
         MatDividerModule,
         MatIconModule,
         MatGridListModule,
-        RouterLink,
-        NgFor,
         CommonModule,
-        QuestionComponent,
         QuestionsComponent
     ],
     selector: 'flow-item',
@@ -35,6 +34,7 @@ export class FlowItemComponent implements OnInit {
   // CurrentFlow! : Input<IFlow>()
 
   flow = input.required<IFlow>();
+  finished = signal<boolean>(false);
 
   private questions: Signal<IQuestion[]> = computed(() => this.flow().questions);
   private currentQuestionIndex!:number;
@@ -51,6 +51,6 @@ export class FlowItemComponent implements OnInit {
   }
 
   onFinished() {
-    alert('Finished');
+    this.finished.set(true);
     }
 }
