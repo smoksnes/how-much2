@@ -13,6 +13,7 @@ import { QuestionComponent } from "../../question/question.component";
 import IQuestion from "../../../interfaces/question";
 import { QuestionsComponent } from "../../questions/questions.component";
 import { ResultsComponent } from "../../results/results.component";
+import { ReactionComponent } from "../../reaction/reaction.component";
 
 @Component({
     imports: [MatCardModule,
@@ -23,7 +24,9 @@ import { ResultsComponent } from "../../results/results.component";
         MatIconModule,
         MatGridListModule,
         CommonModule,
-        QuestionsComponent
+        QuestionsComponent,
+        ResultsComponent,
+        ReactionComponent
     ],
     selector: 'flow-item',
     templateUrl: './flow-item.component.html',
