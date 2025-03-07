@@ -14,9 +14,7 @@
           "beginsPattern": {
             "regexp": "(.*?)"
           },
-          "endsPattern": {
-            "regexp": "bundle generation complete"
-          }
+          "endsPattern": "Watch mode enabled. Watching for file changes..."
         }
       }
     },

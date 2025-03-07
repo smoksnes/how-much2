@@ -3,12 +3,13 @@ import IQuestion, { IHaveQuestions } from '../../interfaces/question';
 import { CommonModule } from '@angular/common';
 import IAnswer from '../../interfaces/answer';
 import { MatCardModule } from '@angular/material/card';
-import { QuestionComponent } from "../question/question.component";
 import CalculationService from '../../services/calculation-service';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
     selector: 'questions',
-    imports: [CommonModule, MatCardModule, QuestionComponent],
+    imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule],
     templateUrl: './questions.component.html',
     styleUrl: './questions.component.scss'
 })

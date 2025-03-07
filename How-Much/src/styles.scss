@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+// @import "@angular/material/prebuilt-themes/azure-blue.css";
+// @import "~@angular/material/prebuilt-themes/rose-red.css";
+// $theme: mat.define-theme();
+// @import '~@angular/material/prebuilt-themes/rose-red.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// html {
+//     @include mat.all-component-themes($theme);
+//   // This line allows you to use color="..." for your toolbar.
+//     @include mat.color-variants-backwards-compatibility($theme);
+//     // color-scheme: light dark;
+//     @include mat.theme((
+//       color: mat.$violet-palette,
+//       typography: Roboto,
+//       density: 0
+//     ));
+//   }
+
+//   :root {
+//     @include mat.button-overrides((
+//       filled-container-color: orange,
+//       filled-label-text-color: red,
+//     ));
+//   }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
