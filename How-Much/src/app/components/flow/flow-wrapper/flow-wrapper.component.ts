@@ -8,11 +8,10 @@ import { CommonModule, NgIf, NgTemplateOutlet } from "@angular/common";
 
 
 @Component({
-  standalone: true,
-  selector: 'flow-wrapper-component',
-  templateUrl: './flow-wrapper.component.html',
-  styleUrls: ['./flow-wrapper.component.scss'],
-  imports: [FlowItemComponent, NgIf, NgTemplateOutlet, CommonModule ],  
+    selector: 'flow-wrapper-component',
+    templateUrl: './flow-wrapper.component.html',
+    styleUrls: ['./flow-wrapper.component.scss'],
+    imports: [FlowItemComponent, NgIf, NgTemplateOutlet, CommonModule]
 })
 export class FlowWrapperComponent implements OnDestroy  {
   sub: any;  

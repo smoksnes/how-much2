@@ -11,19 +11,18 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { RouterLink } from '@angular/router'; 
 import { CommonModule, NgFor } from '@angular/common';
 @Component({
-  standalone: true,
-  imports: [MatCardModule, 
-    MatToolbarModule,
-    MatChipsModule, 
-    MatDividerModule, 
-    MatIconModule, 
-    MatGridListModule, 
-    RouterLink, 
-    NgFor, 
-    CommonModule],
-  selector: 'app-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+    imports: [MatCardModule,
+        MatToolbarModule,
+        MatChipsModule,
+        MatDividerModule,
+        MatIconModule,
+        MatGridListModule,
+        RouterLink,
+        NgFor,
+        CommonModule],
+    selector: 'app-content',
+    templateUrl: './content.component.html',
+    styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {  
 

@@ -6,11 +6,10 @@ import { MatCardModule } from '@angular/material/card';
 import { QuestionComponent } from "../question/question.component";
 
 @Component({
-  selector: 'questions',
-  standalone: true,
-  imports: [CommonModule, MatCardModule, QuestionComponent],
-  templateUrl: './questions.component.html',
-  styleUrl: './questions.component.scss'
+    selector: 'questions',
+    imports: [CommonModule, MatCardModule, QuestionComponent],
+    templateUrl: './questions.component.html',
+    styleUrl: './questions.component.scss'
 })
 export class QuestionsComponent implements OnInit {
   @Output() isFinished = new EventEmitter();

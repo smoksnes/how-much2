@@ -14,22 +14,21 @@ import IQuestion from "../../../interfaces/question";
 import { QuestionsComponent } from "../../questions/questions.component";
 
 @Component({
-  standalone: true,
-  imports: [MatCardModule, 
-    MatToolbarModule,
-    MatChipsModule, 
-    MatDividerModule, 
-    MatIconModule, 
-    MatGridListModule, 
-    RouterLink, 
-    NgFor, 
-    CommonModule,
-    QuestionComponent,
-    QuestionsComponent
-  ],
-  selector: 'flow-item',
-  templateUrl: './flow-item.component.html',
-  styleUrls: ['./flow-item.component.scss']
+    imports: [MatCardModule,
+        MatToolbarModule,
+        MatChipsModule,
+        MatDividerModule,
+        MatIconModule,
+        MatGridListModule,
+        RouterLink,
+        NgFor,
+        CommonModule,
+        QuestionComponent,
+        QuestionsComponent
+    ],
+    selector: 'flow-item',
+    templateUrl: './flow-item.component.html',
+    styleUrls: ['./flow-item.component.scss']
 })
 export class FlowItemComponent implements OnInit {
 
