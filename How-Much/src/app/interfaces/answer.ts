@@ -4,7 +4,7 @@ import IQuestion, { IHaveQuestions } from "./question";
 export default interface IAnswer extends IHaveQuestions {
     title: string;
     value: number;
-    calulation: ICalculation;
+    calculation: ICalculation;
     questions: IQuestion[];
 }
 

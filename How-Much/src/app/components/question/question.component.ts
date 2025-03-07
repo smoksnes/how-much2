@@ -3,6 +3,7 @@ import IQuestion from '../../interfaces/question';
 import { MatDivider } from '@angular/material/divider';
 import IAnswer from '../../interfaces/answer';
 import { NgFor, NgIf } from '@angular/common';
+import CalculationService from '../../services/calculation-service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class QuestionComponent implements OnInit  {
   innerQuestion: IQuestion | undefined;
   private currentQuestionIndex:number = 0;
 
-  constructor(){
+  constructor(private calculationService: CalculationService) {
   }
   ngOnInit(): void {
   }
@@ -27,10 +28,10 @@ export class QuestionComponent implements OnInit  {
   }
 
   select = (answer: IAnswer) => {
+    this.calculationService.updateSum(answer.calculation);
+
     console.log(answer.title);
-    console.log('hello');
     if(answer.questions != null && answer.questions.length > 0){
-      console.log('hello');
       this.innerQuestions = answer.questions;
       this.innerQuestion = answer.questions[this.currentQuestionIndex];
     }

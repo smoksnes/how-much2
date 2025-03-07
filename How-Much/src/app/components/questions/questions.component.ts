@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import IAnswer from '../../interfaces/answer';
 import { MatCardModule } from '@angular/material/card';
 import { QuestionComponent } from "../question/question.component";
+import CalculationService from '../../services/calculation-service';
 
 @Component({
     selector: 'questions',
@@ -20,7 +21,7 @@ export class QuestionsComponent implements OnInit {
   currentQuestionIndex = 0;
   subQuestions: IHaveQuestions | null = null;
 
-  constructor(){
+  constructor(private calculationService: CalculationService){
 
   }
   ngOnInit(): void {
@@ -29,13 +30,11 @@ export class QuestionsComponent implements OnInit {
   }
 
   childIsFinishedHandler(): void{
-    console.log('childIsFinishedHandler');
     this.subQuestions = null;
     this.showNextQuestion();
   }
 
   private showNextQuestion(): void{
-    console.log('hello');
     const nextQuestionIndex = ++this.currentQuestionIndex;
     if(this.questions().questions && this.questions().questions.length >= nextQuestionIndex + 1){
       this.currentQuestion = computed(() => this.questions().questions[nextQuestionIndex]);
@@ -46,9 +45,8 @@ export class QuestionsComponent implements OnInit {
     // No more questions.
   }
 
-
-
   select(answer:IAnswer): void{
+    this.calculationService.updateSum(answer.calculation);
     if(answer.questions){
       this.subQuestions = answer;
     }
