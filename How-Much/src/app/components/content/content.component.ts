@@ -30,7 +30,6 @@ export class ContentComponent implements OnInit {
 
   constructor(
     private service: FlowService ) { 
-    debugger;
     this.flows$ = this.service.getAll();
     // console.log(this.flows);
   }

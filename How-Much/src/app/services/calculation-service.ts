@@ -2,6 +2,7 @@ import { Injectable, signal } from "@angular/core";
 import IFlow from "../interfaces/flow";
 import { HttpClient } from "@angular/common/http";
 import { map, Observable } from "rxjs";
+import { Operation } from "../interfaces/operation";
 
 @Injectable({
     providedIn: 'root',
@@ -30,10 +31,3 @@ constructor(){}
         }
     }
 }
-
-enum Operation {
-    Addition,
-    Subtraction,
-    Multiplication,
-    Division,
-  }

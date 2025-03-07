@@ -37,7 +37,7 @@ export class QuestionsComponent implements OnInit {
   private showNextQuestion(): void{
     console.log('hello');
     const nextQuestionIndex = ++this.currentQuestionIndex;
-    if(this.questions().questions && this.questions().questions.length > nextQuestionIndex + 1){
+    if(this.questions().questions && this.questions().questions.length >= nextQuestionIndex + 1){
       this.currentQuestion = computed(() => this.questions().questions[nextQuestionIndex]);
     }
     else{
