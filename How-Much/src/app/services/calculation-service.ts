@@ -9,6 +9,7 @@ export default class CalculationService
 {
 
     totalSum = signal<number>(0); 
+    lastCalculation = signal<ICalculation>({operation: Operation.None, sum: 0}); 
 
     constructor(){
         effect(() => {
@@ -34,6 +35,7 @@ export default class CalculationService
             case Operation.None:
                 break;
         }
+        this.lastCalculation.set(calculation);
     }
 
 }

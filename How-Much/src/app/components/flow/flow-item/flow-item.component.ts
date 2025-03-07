@@ -14,20 +14,20 @@ import IQuestion from "../../../interfaces/question";
 import { QuestionsComponent } from "../../questions/questions.component";
 import { ResultsComponent } from "../../results/results.component";
 import { ReactionComponent } from "../../reaction/reaction.component";
+import { ReactionWrapperComponent } from "../../reaction-wrapper/reaction-wrapper.component";
 
 @Component({
     imports: [MatCardModule,
-        ResultsComponent,
-        MatToolbarModule,
-        MatChipsModule,
-        MatDividerModule,
-        MatIconModule,
-        MatGridListModule,
-        CommonModule,
-        QuestionsComponent,
-        ResultsComponent,
-        ReactionComponent
-    ],
+    ResultsComponent,
+    MatToolbarModule,
+    MatChipsModule,
+    MatDividerModule,
+    MatIconModule,
+    MatGridListModule,
+    CommonModule,
+    QuestionsComponent,
+    ResultsComponent,
+    ReactionWrapperComponent],
     selector: 'flow-item',
     templateUrl: './flow-item.component.html',
     styleUrls: ['./flow-item.component.scss']
