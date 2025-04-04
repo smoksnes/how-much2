@@ -1,3 +1,16 @@
 .question-container{
     padding-top: 15px;
 }
+
+.toolbar-row {
+    display: flex;
+    gap: 15px;
+    .spacer {
+        display: inline-block; /* Ensure the span is treated as a box */
+        width: 1px; /* Set a width */
+        height: calc(100% - 30px);  /* Set a height */
+        border-right: 1px solid #e0e0e0;
+        display: inline-flex;
+    }
+}
+

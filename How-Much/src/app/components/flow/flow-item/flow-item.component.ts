@@ -7,7 +7,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { RouterLink } from '@angular/router'; 
+import { RouterLink, RouterModule } from '@angular/router'; 
 import { CommonModule, NgFor } from '@angular/common';
 import { QuestionComponent } from "../../question/question.component";
 import IQuestion from "../../../interfaces/question";
@@ -27,6 +27,7 @@ import { ReactionWrapperComponent } from "../../reaction-wrapper/reaction-wrappe
     CommonModule,
     QuestionsComponent,
     ResultsComponent,
+    RouterModule,
     ReactionWrapperComponent],
     selector: 'flow-item',
     templateUrl: './flow-item.component.html',

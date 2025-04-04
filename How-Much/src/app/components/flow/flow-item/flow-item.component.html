@@ -1,5 +1,9 @@
   <mat-toolbar color="primary">
-    <span>{{flow().name}}</span>
+    <mat-toolbar-row class="toolbar-row">
+      <span><a href="/">Hem</a></span>
+      <span class="spacer"></span>
+      <span>{{flow().name}}</span>
+  </mat-toolbar-row>
   </mat-toolbar>
 
   <ng-container *ngIf="!finished(); else showResults">
