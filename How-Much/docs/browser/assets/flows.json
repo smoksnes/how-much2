@@ -1,0 +1,433 @@
+[
+    {
+        "id": 1,
+        "name": "Jobbarkompis slutar",
+        "description": "En jobbarkompis slutar och du vill veta hur mycket som är rimligt att lägga på hens avskedpresent.",
+        "startSum": 50,
+        "questions": [
+            {
+                "title": "Har du gott om pengar?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "icon": "account_balance",
+                        "calculation": {
+                            "sum": 40,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "Ganska",
+                        "icon": "attach_money",
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "Nej",
+                        "icon": "savings",
+                        "calculation": {
+                            "sum": 0,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Är du snål?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "icon": "money_off",
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "subtraction"
+                        }
+                    },
+                    {
+                        "title": "Nej",
+                        "icon": "attach_money",
+                        "calculation": {
+                            "sum": 0,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Gillar du jobbarkompisen?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "value": 2,
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "addition"
+                        },
+                        "icon": "thumb_up",
+                        "questions": [
+                            {
+                                "title": "Hur mycket gillade du jobbarkompisen?",
+                                "answers": [
+                                    {
+                                        "title": "Jättemycket",
+                                        "value": 1,
+                                        "icon": "mood",
+                                        "calculation": {
+                                            "sum": 20,
+                                            "operation": "addition"
+                                        },
+                                        "questions": [
+                                            {
+                                                "title": "Fling?",
+                                                "answers": [
+                                                    {
+                                                        "title": "Kanske...",
+                                                        "icon": "single_bed",
+                                                        "calculation": {
+                                                            "sum": 50,
+                                                            "operation": "addition"
+                                                        },
+                                                        "questions": [
+                                                            {
+                                                                "title": "Slutade det bra?",
+                                                                "answers": [
+                                                                    {
+                                                                        "title": "Ja",
+                                                                        "icon": "favorite",
+                                                                        "calculation": {
+                                                                            "sum": 10,
+                                                                            "operation": "addition"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "title": "Nej",
+                                                                        "icon": "heart_broken",
+                                                                        "calculation": {
+                                                                            "sum": 50,
+                                                                            "operation": "subtraction"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "title": "Nej",
+                                                        "icon": "heart_broken",
+                                                        "calculation": {
+                                                            "sum": 0,
+                                                            "operation": "addition"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "title": "Bara lite",
+                                        "value": 2,
+                                        "icon": "sentiment_neutral",
+                                        "calculation": {
+                                            "sum": 5,
+                                            "operation": "addition"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Nej",
+                        "value": 1,
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "subtraction"
+                        },
+                        "icon": "thumb_down"
+                    }
+                ]
+            },
+            {
+                "title": "Har ni träffats utanför jobbet?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "icon": "add_home_work",
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "none"
+                        },
+                        "questions": [
+                            {
+                                "title": "Träffades ni flera gånger?",
+                                "answers": [
+                                    {
+                                        "title": "Ja",
+                                        "icon": "check",
+                                        "calculation": {
+                                            "sum": 20,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Nej",
+                                        "icon": "close",
+                                        "calculation": {
+                                            "sum": 5,
+                                            "operation": "addition"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Har era barn lekt tillsammans?",
+                                "answers": [
+                                    {
+                                        "title": "Ja",
+                                        "icon": "family_restroom",
+                                        "calculation": {
+                                            "sum": 20,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Nej",
+                                        "icon": "close",
+                                        "calculation": {
+                                            "sum": 0,
+                                            "operation": "none"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Nej",
+                        "icon": "close",
+                        "calculation": {
+                            "sum": 0,
+                            "operation": "none"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Hur länge jobbade ni ihop?",
+                "answers": [
+                    {
+                        "title": "< 1 år",
+                        "calculation": {
+                            "sum": 5,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "1-3 år",
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "> 3 år",
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bröllopspresent",
+        "description": "Någon du känner ska gifta sig och du vill ge en present.",
+        "questions": [
+            {
+                "title": "Hur länge har ni känt varandra?",
+                "answers": [
+                    {
+                        "title": "< 1 år",
+                        "calculation": {
+                            "sum": 50,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "1-3 år",
+                        "calculation": {
+                            "sum": 150,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "> 3 år",
+                        "calculation": {
+                            "sum": 300,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Var träffades ni?",
+                "answers": [
+                    {
+                        "title": "Jobbet",
+                        "calculation": {
+                            "sum": 10,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "Pluggat ihop",
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "addition"
+                        },
+                        "questions": [
+                            {
+                                "title": "Var pluggade ni?",
+                                "answers": [
+                                    {
+                                        "title": "Grundskola",
+                                        "calculation": {
+                                            "sum": 100,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Gymnasiet",
+                                        "calculation": {
+                                            "sum": 150,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Universitet",
+                                        "calculation": {
+                                            "sum": 10,
+                                            "operation": "addition"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Barndomsvänner",
+                        "calculation": {
+                            "sum": 300,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "Annat",
+                        "calculation": {
+                            "sum": 0,
+                            "operation": "addition"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Första besöket hos någon",
+        "description": "Du ska hem till någon för första gången och du vill inte komma tomhänt.",
+        "questions": [
+            {
+                "title": "Hur länge har ni känt varandra?",
+                "answers": [
+                    {
+                        "title": "< 1 år",
+                        "calculation": {
+                            "sum": 50,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "1-3 år",
+                        "calculation": {
+                            "sum": 150,
+                            "operation": "addition"
+                        }
+                    },
+                    {
+                        "title": "> 3 år",
+                        "calculation": {
+                            "sum": 300,
+                            "operation": "addition"
+                        },
+                        "questions": [
+                            {
+                                "title": "Har ni känt varandra i mer än tre år men aldrig varit hemma hos varandra!?!??",
+                                "answers": [
+                                    {
+                                        "title": "Ja",
+                                        "calculation": {
+                                            "sum": 100,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Nej, så är det förstås inte...",
+                                        "calculation": {
+                                            "sum": 50,
+                                            "operation": "addition"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Dricker den du ska besöka vin?",
+                "answers": [
+                    {
+                        "title": "Ja",
+                        "calculation": {
+                            "sum": 20,
+                            "operation": "addition"
+                        },
+                        "questions": [
+                            {
+                                "title": "Köp en flaska vin bara. Det funkar alltid.",
+                                "answers": [
+                                    {
+                                        "title": "Ja",
+                                        "calculation": {
+                                            "sum": 10,
+                                            "operation": "addition"
+                                        }
+                                    },
+                                    {
+                                        "title": "Ok",
+                                        "calculation": {
+                                            "sum": 10,
+                                            "operation": "addition"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Dåså. Då är vi klara här. Ha det så kul...",
+                                "calculation": {
+                                    "sum": 0,
+                                    "operation": "addition"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
