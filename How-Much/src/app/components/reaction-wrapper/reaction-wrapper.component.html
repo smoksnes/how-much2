@@ -1,4 +1,6 @@
-<p>reaction-wrapper works!</p>
 <div class="outer-container" #container>
-    <div class="foo"></div>
+    <div class="reaction-item" *ngFor="let item of items()">
+        <mat-icon *ngIf="isPositiveReaction(item)">favorite</mat-icon>
+        <mat-icon *ngIf="!isPositiveReaction(item)">sentiment_dissatisfied</mat-icon>
+    </div>
 </div>

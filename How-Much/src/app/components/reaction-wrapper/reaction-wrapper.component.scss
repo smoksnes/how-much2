@@ -7,24 +7,58 @@
     margin-top: 1rem;
     background-color: yellow;
     z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .outer-container {
-    background-color: green;
+    // background-color: green;
     min-height: 50px;
-    bottom: 0;
+    bottom: 50px;
     position: absolute;
+    align-content: center;
+    // margin: auto;
+    // width: 100%;
 }
 
-:host ::ng-deep .foo {
+:host ::ng-deep .reaction-item {
     position: relative;
-    bottom: 0; // Start below the screen
+    margin: auto;
+    // width: 50%;
+    // bottom: 50px; // Start below the screen
     display: block;
     margin-right: 10px;
-    background-color: red;
+    // background-color: red;
     width: 100px;
     height: 100px;
-    animation: enterFromBottom 2s ease-out forwards, hideAfterAnimation 0s 2s forwards;
+    animation: enterFromBottom 3s ease-out forwards, hideAfterAnimation 0s 2s forwards;
+    font-size: 140pt;
+    // color: black;
+
+    .mat-icon {
+        font-size: 100px;
+        width: 300px;
+        height: 300px;
+        // color: red;
+        // background-image: linear-gradient(red, blue);
+        // color: transparent;
+        // background-clip: text;
+        background: -moz-linear-gradient(top, #e72c83 0%, red 100%);
+        background: -webkit-linear-gradient(top, #e72c83 0%, red 100%);
+        background: linear-gradient(to bottom, #e72c83 0%, red 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    
+    &.positive-reaction{
+        // background-color: blue;
+    }
+    &.negative-reaction{
+        // background-color: orange;
+    }
 }
 
 @keyframes enterFromBottom {
@@ -32,12 +66,12 @@
         transform: translateY(120%);
         opacity: 1;
     }
-    80% {
-        transform: translateY(-70vh); // Move to 50% of the screen height
+    50% {
+        transform: translateY(-80vh); // Move to 50% of the screen height
         opacity: 0; // Fade out
     }
     100% {
-        transform: translateY(-50vh); // Stay at 50% of the screen height
+        transform: translateY(-80vh); // Stay at 50% of the screen height
         opacity: 0; // Fully faded out
     }
 }
