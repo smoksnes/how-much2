@@ -1,7 +1,7 @@
 import { Component, computed, input, OnInit, signal, Signal } from "@angular/core";
 import FlowService from "../../../services/flow-service";
 import IFlow from "../../../interfaces/flow";
-import { MatCardModule } from '@angular/material/card';
+import { MatCardModule, MatCardActions, MatCardHeader } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
