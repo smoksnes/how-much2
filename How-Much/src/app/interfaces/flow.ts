@@ -5,6 +5,7 @@ export default interface IFlow extends IHaveQuestions{
     startSum: number,
     name: string;
     questions: IQuestion[]
+    description: string;
     // constructor(name:string, questions: Question[]){
     //     this.name = name;
     //     this. questions = questions;
