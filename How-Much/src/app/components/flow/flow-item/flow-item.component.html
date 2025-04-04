@@ -3,7 +3,9 @@
   </mat-toolbar>
 
   <ng-container *ngIf="!finished(); else showResults">
-    <questions [questions]="(flow())" (isFinished)="onFinished()"></questions>
+    <div class="question-container">
+      <questions [questions]="(flow())" (isFinished)="onFinished()"></questions>
+    </div>
   </ng-container>
   <ng-template #showResults>
     <results></results>

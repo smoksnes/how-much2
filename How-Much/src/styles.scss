@@ -5,8 +5,13 @@
 // $theme: mat.define-theme();
 // @import '~@angular/material/prebuilt-themes/rose-red.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+}
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background: linear-gradient(to bottom, white 0%, #eb77ad 100%);
+}
 
 html {
     //  @include mat.all-component-themes($theme);

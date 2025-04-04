@@ -2,11 +2,10 @@
   <ng-container *ngIf="subQuestions == null">
     <div class="example-button-row">
       <h1>{{currentQuestion().title}}</h1>
-      <div class="example-flex-container">
+      <div class="button-container">
         <ng-container *ngFor="let answer of currentQuestion().answers">
-          <div class="example-button-container">
+          <div>
             <button mat-fab extended (click)="select(answer)">
-              
               <mat-icon *ngIf="answer.icon">{{answer.icon}}</mat-icon>
               {{answer.title}}
             </button>
